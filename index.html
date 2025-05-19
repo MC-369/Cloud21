@@ -30,8 +30,18 @@
       justify-content: space-between;
       align-items: center;
     }
-    header img {
+    .logo-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-heading img {
       height: 50px;
+    }
+    .logo-heading h1 {
+      color: var(--accent);
+      font-size: 2rem;
+      margin: 0;
     }
     nav a {
       margin: 0 1rem;
@@ -89,7 +99,10 @@
 </head>
 <body>
   <header>
-    <img src="images/log1.png" alt="Cloud 21 Logo">
+    <div class="logo-heading">
+      <img src="images/utensil-logo.png" alt="Custom Logo">
+      <h1>Cloud 21</h1>
+    </div>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About Us</a>
@@ -156,4 +169,3 @@
   </footer>
 </body>
 </html>
-

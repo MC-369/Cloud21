@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud 21 | Online Catering & Delivery</title>
+  <style>
+    :root {
+      --dark-bg: #121212;
+      --light-bg: #ffffff;
+      --accent: #ff9800;
+      --text-dark: #e0e0e0;
+      --text-light: #212121;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--text-dark);
+      transition: 0.3s;
+    }
+    header, footer {
+      background-color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    button.theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Cloud 21</h1>
+    <p>Online Food Delivery & Catering</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#donate">Donate/Support</a>
+      <a href="#contact">Contact</a>
+      <a href="#blog">Blog/Updates</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="home" class="section">
+      <h2>Welcome to Cloud 21</h2>
+      <p>Your go-to destination for premium catering, powered by the speed of Swiggy & Zomato.</p>
+      <button>Order Now</button>
+      <button>View Menu</button>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p>Cloud 21 is a modern kitchen-to-customer catering brand offering handcrafted meals, delivered fresh through our partners Swiggy and Zomato. We blend quality ingredients, scalable cloud kitchen infrastructure, and seamless delivery for busy professionals, students, and families.</p>
+    </section>
+
+    <section id="donate" class="section">
+      <h2>Donate / Support</h2>
+      <p>Your contribution helps us scale our kitchen network, empower chefs, and deliver quality food at affordable rates.</p>
+      <button>Support Us via UPI</button>
+      <button>Partner With Us</button>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: cloud21foods@gmail.com</p>
+      <p>Phone: +91-XXXXXXXXXX</p>
+    </section>
+
+    <section id="blog" class="section">
+      <h2>Blog / Updates</h2>
+      <ul>
+        <li>Launching in Delhi NCR soon!</li>
+        <li>Introducing our summer special menu</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Cloud 21. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = getComputedStyle(body).backgroundColor;
+      if (current === 'rgb(18, 18, 18)') {
+        body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light-bg');
+        body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-light');
+      } else {
+        body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark-bg');
+        body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-dark');
+      }
+    }
+  </script>
+</body>
+</html>

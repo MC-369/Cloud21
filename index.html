@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloud 21 | Online Catering & Delivery</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Friz+Quadrata+Std:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
     :root {
-      --dark-bg: #ffffff;
-      --light-bg: #f9f9f9;
-      --accent: #e4002b;
-      --accent2: #000000;
-      --text-dark: #000000;
-      --text-light: #ffffff;
+      --bg-dark: #0d0d0d;
+      --bg-light: #1a1a1a;
+      --accent-neon: #00ffff;
+      --accent-pink: #ff00ff;
+      --text-primary: #e0e0e0;
+      --text-glow: #00ffff;
     }
 
     body {
-      font-family: 'Roboto', Arial, sans-serif;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--dark-bg);
-      color: var(--text-dark);
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
       font-size: 16px;
       line-height: 1.6;
     }
 
     header, footer {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
+      background-color: var(--bg-light);
+      border-bottom: 2px solid var(--accent-neon);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -41,25 +41,28 @@
       gap: 1rem;
     }
 
-    /* Removed logo */
     .logo-heading img {
       display: none;
     }
 
-    /* Apply custom font to Cloud 21 */
     .logo-heading h1 {
-      color: var(--accent);
+      color: var(--accent-neon);
       font-size: 2rem;
       margin: 0;
-      font-family: 'Friz Quadrata Std', serif;
-      font-weight: 700;
+      text-shadow: 0 0 8px var(--accent-neon);
     }
 
     nav a {
       margin: 0 1rem;
-      color: var(--accent2);
+      color: var(--accent-pink);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-neon);
+      text-shadow: 0 0 6px var(--accent-neon);
     }
 
     .container {
@@ -71,26 +74,36 @@
     .section {
       margin-bottom: 3rem;
       padding: 2rem;
-      background-color: var(--light-bg);
+      background-color: var(--bg-light);
       border-radius: 8px;
-      border: 1px solid #ddd;
+      border: 1px solid var(--accent-neon);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     }
 
     h2 {
       font-size: 1.75rem;
-      color: var(--accent);
+      color: var(--accent-neon);
       text-transform: uppercase;
+      text-shadow: 0 0 5px var(--accent-neon);
     }
 
     button {
       padding: 0.75rem 1.5rem;
-      background-color: var(--accent);
+      background-color: var(--accent-pink);
       color: white;
       border: none;
       border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
       margin: 0.5rem 1rem 0 0;
+      text-shadow: 0 0 5px var(--accent-pink);
+      box-shadow: 0 0 10px var(--accent-pink), 0 0 20px var(--accent-pink);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--accent-neon), 0 0 25px var(--accent-neon);
     }
 
     .menu-preview {
@@ -101,17 +114,28 @@
 
     .menu-preview div {
       flex: 1 1 300px;
-      background-color: white;
-      border: 1px solid #ddd;
+      background-color: #222;
+      border: 1px solid var(--accent-pink);
       border-radius: 8px;
       overflow: hidden;
       text-align: center;
       padding: 1rem;
+      color: var(--text-primary);
+      box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
     }
 
     .menu-preview img {
       max-width: 100%;
       height: auto;
+      border-radius: 4px;
+    }
+
+    footer {
+      border-top: 2px solid var(--accent-neon);
+      text-align: center;
+      color: var(--accent-neon);
+      font-size: 0.9rem;
+      text-shadow: 0 0 5px var(--accent-neon);
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -119,7 +143,6 @@
 <body>
   <header>
     <div class="logo-heading">
-      <!-- Logo removed -->
       <h1>Cloud 21</h1>
     </div>
     <nav>
